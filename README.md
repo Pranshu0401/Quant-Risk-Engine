@@ -1,4 +1,4 @@
-# Quantitative Risk Engine
+# Multi-Asset Quantitative Risk Engine & Exposure Analytics Pipeline
 
 A modular, production-ready quantitative risk engine modeling both Market Risk (RMG) and Counterparty Credit Risk (CEM).
 This system replaces legacy EUC (End User Computing) spreadsheets with an automated, version-controlled pipeline.
