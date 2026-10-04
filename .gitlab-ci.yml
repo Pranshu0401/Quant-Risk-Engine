@@ -1,0 +1,24 @@
+stages:
+  - test
+  - deploy
+
+variables:
+  PYTHON_VERSION: "3.9"
+
+test_models:
+  image: python:${PYTHON_VERSION}
+  stage: test
+  script:
+    - pip install -r requirements.txt
+    - pytest tests/ --junitxml=report.xml
+  artifacts:
+    when: always
+    reports:
+      junit: report.xml
+
+deploy_reports:
+  stage: deploy
+  script:
+    - echo "Deploying Risk Reports to internal SFTP..."
+  only:
+    - main
